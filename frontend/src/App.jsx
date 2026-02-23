@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { DollarSign, Coins, ExternalLink, Calendar, RefreshCcw, TrendingUp, TrendingDown } from 'lucide-react';
 import mockData from '../../scraper/data.json';
 
-// const GITHUB_RAW_URL = 'https://raw.githubusercontent.com/user/repo/main/scraper/data.json'; 
+const GITHUB_RAW_URL = 'https://github.com/awminth/goldDollar/blob/main/scraper/data.json'; 
 
 function App() {
   const [data, setData] = useState(null);
@@ -14,11 +14,11 @@ function App() {
     setError(null);
     try {
       // In production, fetch from GitHub raw URL. For now, use local mock
-      // const res = await fetch(GITHUB_RAW_URL);
-      // const jsonData = await res.json();
+      const res = await fetch(GITHUB_RAW_URL);
+      const jsonData = await res.json();
       
       setTimeout(() => {
-        setData(mockData);
+        setData(jsonData);
         setLoading(false);
       }, 500);
 
