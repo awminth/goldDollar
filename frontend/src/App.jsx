@@ -16,11 +16,8 @@ function App() {
       // In production, fetch from GitHub raw URL. For now, use local mock
       const res = await fetch(GITHUB_RAW_URL);
       const jsonData = await res.json();
-      
-      setTimeout(() => {
-        setData(jsonData);
-        setLoading(false);
-      }, 500);
+      setData(jsonData);
+      setLoading(false);
 
     } catch (err) {
       console.error(err);
