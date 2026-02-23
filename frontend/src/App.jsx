@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { DollarSign, Coins, ExternalLink, Calendar, RefreshCcw, TrendingUp, TrendingDown } from 'lucide-react';
-import mockData from '../../scraper/data.json';
 
-const GITHUB_RAW_URL = 'https://github.com/awminth/goldDollar/blob/main/scraper/data.json'; 
+const GITHUB_RAW_URL = 'https://raw.githubusercontent.com/awminth/goldDollar/refs/heads/main/scraper/data.json'; 
 
 function App() {
   const [data, setData] = useState(null);
